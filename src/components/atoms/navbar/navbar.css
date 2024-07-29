@@ -1,0 +1,152 @@
+/* Estilos básicos para el navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #a31639;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 10;
+  background-color: #fff; /* Fondo blanco para la barra de navegación */
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding-left: 0.5rem;
+  margin: 0.2rem;
+}
+
+.navbar__text {
+  font-family: "Zilla Slab", serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #a31639;
+  margin-right: 1rem;
+}
+
+.navbar__image {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Estilos para el botón de menú hamburguesa */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding-right: 0.7rem;
+}
+
+.navbar__toggle-line {
+  width: 100%;
+  height: 0.15rem;
+  background-color: #a31639;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar__toggle.open .navbar__toggle-line:nth-child(1) {
+  transform: translateY(0.625rem) rotate(45deg);
+}
+
+.navbar__toggle.open .navbar__toggle-line:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__toggle.open .navbar__toggle-line:nth-child(3) {
+  transform: translateY(-0.625rem) rotate(-45deg);
+}
+
+/* Estilos para el menú */
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: max-height 0.3s ease;
+}
+
+.navbar__menu.open {
+  display: flex;
+}
+
+.navbar__menu-item {
+  margin: 0 1rem;
+}
+
+.navbar__menu-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #a31639;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative; /* Para el subrayado */
+  transition: color 0.3s ease;
+}
+
+.navbar__menu-link:hover {
+  color: #a31639;
+}
+
+.navbar__menu-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Ajuste vertical */
+  width: 100%;
+  height: 3px; /* Grosor del subrayado */
+  background-color: #a31639;
+  filter: blur(1px); /* Efecto de desenfoque */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  z-index: -1; /* Coloca el subrayado detrás del texto */
+}
+
+.navbar__menu-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Media queries para vista móvil */
+@media (max-width: 768px) {
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff; /* Cambiado a blanco */
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 9;
+  }
+
+  .navbar__menu.open {
+    max-height: 15rem; /* Ajusta según el número de elementos */
+  }
+
+  .navbar__menu-item {
+    margin: 0.5rem 0;
+  }
+
+  /* Ocultar el texto del logo y mostrar la imagen en dispositivos móviles */
+  .navbar__text {
+    display: none;
+  }
+
+  .navbar__image {
+    display: block;
+  }
+}
