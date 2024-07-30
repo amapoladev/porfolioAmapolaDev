@@ -1,0 +1,41 @@
+.section-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 20px;
+  height: 40vh;
+}
+
+.section-top-name {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: #000000;
+}
+
+.section-top-nameCompany {
+  color: #ffffff;
+  font-family: "Zilla Slab", serif;
+  font-weight: 700;
+  font-size: 7rem;
+  font-style: normal;
+  margin-left: 2vh;
+  padding-right: 2rem;
+}
+
+.section-top-image {
+  grid-area: 1 / 2 / 2 / 3;
+  background: #d6d6d6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-top-imageLogo{
+  height: 24rem;
+
+}
+
+.section-top-text {
+  grid-area: 1 / 3 / 2 / 4;
+  background-color: #d93142;
+}

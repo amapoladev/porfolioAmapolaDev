@@ -1,2 +1,24 @@
 @import "normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* text{
+    color: #c82139;
+}
+body{
+    background: linear-gradient(
+        to right,
+        #ffffff 0%,   
+        #ffffff 5%,  
+        #297677 5%,  
+        #297677 50%,  
+        #559e92 50%,  
+        #559e92 95%,  
+        #ffffff 95%, 
+        #ffffff 100%  
+    );
+} */
+
+/* * {
+    background-image: url('../src/assets/images/amapola.svg');
+} */
+
